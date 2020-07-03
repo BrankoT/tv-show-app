@@ -12,16 +12,16 @@
                     <EpisodeItem :episode="episode"/>
                 </div>
                 <div class="text-center pt-4 clear-both">
-                    <button :class="['w-24 text-white font-bold py-2 px-4 rounded transition duration-200 focus:outline-none', getEpisodes.info.prev.length > 0 ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed']"
-                            @click="getEpisodes.info.prev.length > 0 && changePage(getEpisodes.info.prev)"
+                    <button :class="['w-24 text-white font-bold py-2 px-4 rounded transition duration-200 focus:outline-none', getEpisodes.info.prev ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed']"
+                            @click="getEpisodes.info.prev && changePage(getEpisodes.info.prev)"
                     >
                         Previous
                     </button>
 
                     <span class="mx-6">{{getPage}}</span>
 
-                    <button :class="['w-24 text-white font-bold py-2 px-4 rounded transition duration-200 focus:outline-none', getEpisodes.info.next.length > 0 ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed']"
-                            @click="getEpisodes.info.next.length > 0 && changePage(getEpisodes.info.next)"
+                    <button :class="['w-24 text-white font-bold py-2 px-4 rounded transition duration-200 focus:outline-none', getEpisodes.info.next ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed']"
+                            @click="getEpisodes.info.next && changePage(getEpisodes.info.next)"
                     >
                         Next
                     </button>
